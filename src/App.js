@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import ExpTrackerHead from './ExpenseTrackerComponents/HeadComponents/ExpTrackerHead';
+import ExpTrackerBody from './ExpenseTrackerComponents/BodyComponents/ExpTrackerBody';
+import ExpTrackerFoot from './ExpenseTrackerComponents/FootComponents/ExpTrackerFoot';
+import RowBreak from './Utility/DesignUtil/RowBreaker';
+import {BalanceContext, ExpenseContext, IncomeContext, TransactionsContext } from './ExpenseTrackerComponents/AppData/FinancialData';
+import { useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(){
+
+  let balanceState = useState(0);
+  let expenseState = useState(0); 
+  let incomeState = useState(0);
+  let transactionsState = useState([]);
+
+  return(
+    <div className='expenseApp'>
+      <BalanceContext.Provider value={balanceState}>
+      <TransactionsContext.Provider value={transactionsState}>
+      <ExpenseContext.Provider value={expenseState}>
+      <IncomeContext.Provider value={incomeState}>
+        <ExpTrackerHead/>
+        <RowBreak/>
+        <ExpTrackerBody/>
+        <RowBreak/>
+        <ExpTrackerFoot/>
+        </IncomeContext.Provider>
+        </ExpenseContext.Provider>
+        </TransactionsContext.Provider>
+        </BalanceContext.Provider>
     </div>
-  );
+  )
+
 }
 
 export default App;

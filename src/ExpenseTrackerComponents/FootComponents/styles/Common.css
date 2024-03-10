@@ -1,0 +1,12 @@
+.functionalButton
+{
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    height: 50%;
+    width: 30%;
+    margin-top: 5%;
+    cursor: pointer;
+    border-radius: 15px;
+}

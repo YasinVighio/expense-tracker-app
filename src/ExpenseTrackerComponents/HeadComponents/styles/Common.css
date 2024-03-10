@@ -1,0 +1,17 @@
+.headInfobox
+{
+    width: 50%;
+    background-color: #f0f0f0;
+    margin: 5px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.headInfoBoxData
+{
+    font-size: 45px;
+    font-weight: bold;
+}

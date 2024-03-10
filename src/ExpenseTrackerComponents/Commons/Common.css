@@ -1,0 +1,15 @@
+.expTrackerHeaderFooter
+{
+    background-color: antiquewhite;
+    width: 30%;
+    height: 15%;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.expTrackerFoot
+{
+    justify-content: space-around;
+}
